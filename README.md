@@ -55,7 +55,6 @@ https://github.com/edgardomortiz/vcf2phylip/blob/master/vcf2phylip.py
 
 and then run following to copy the code to each of the sub directories 
 ```
-```
 for i in 1; do cd ${i}mb_vcfs;cp ../vcf2phylip.py .;cd .. ;done
 ```
 and then copy this script to the main directory as convert_vcf_and_align_fasta.sh
@@ -96,7 +95,7 @@ mkdir to_download
 for i in {1..20};do cp ${i}mb_vcfs/*alignment.fasta ./to_download/;done
 ```
 Then download 
-
+```
 
 if (nrow(male_fixed_no_niger)==0) {
   print(paste('No male fixed SNPs on',current_region))
