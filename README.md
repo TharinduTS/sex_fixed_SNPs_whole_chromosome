@@ -447,13 +447,15 @@ Then make new files for different chromosome regions
 ```
 for i in {1..20};do sed "s/chr_numbers<-1/chr_numbers<-${i}/g" compare_Fasta>compare_Fasta${i}.sh;done
 ```
+move those fioles into corresponding directories
+```
+for i in {1..20}; do mkdir region${i}; mv ${i}mb_vcfs_alignment.fasta region${i}; mv compare_Fasta${i}.sh region${i ;done
+```
 Change rscript directory accordingly
 ```
 for i in {1..20}; do sed -i "s/testing_whole_chr7\/to_download/testing_whole_chr7\/to_download\/region${i}/g" region${i}/compare_Fasta${i}.sh;done
 ```
 And run them
-
-for i in {1..20}; do mkdir region${i}; mv ${i}mb_vcfs_alignment.fasta region${i}; mv compare_Fasta${i}.sh region${i ;done
 ```
 #!/bin/sh
 #SBATCH --job-name=fst
